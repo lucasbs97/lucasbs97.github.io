@@ -41,7 +41,24 @@
         amenizado até certo ponto de diversas maneiras: Inserindo uma memória cache entre o processador e a memória, utilizando
         caches separados com canais de transmissão separados para dados e instruções (conceito da arquitetura de Harvard Modificada
         que será abordada mais abaixo), entre outros.</p>
-      <h2>Something</h2>
+      <h2>Arquitetura de Harvard</h2>
+      <p>A arquitetura de Harvard surgiu da necessidade de fazer com que a CPU trabalhe mais rápido e tem como principal ponto
+        o uso de locais de memória distintos e de canais de transmissão independentes para dados e instruções, permitindo que o
+        processador acesse ambos simultaneamente.</p>
+      <p>O conceito dessa arquitetura teve origem na Universidade de Harvard no projeto do computador Harvard Mark I, desenvolvido
+        entre os anos de 1937 e 1944, ele foi idealizado por Howard Aiken ao lado da IBM e da marinha norte americana. Esse 
+        computador unia conceitos digitais e analógicos, pois em sua composição haviam sistemas mecânicos e eletrônicos. Apesar
+        de ter origem durante a segunda guerra mundial, a arquitetura só veio à tona novamente durante a década de 70 com o 
+        desenvolvimento dos circuitos integrados e transistores.</p>
+      <p>A arquitetura de Harvard faz uso de um processo chamado de pipelining, isso quer dizer que a leitura das próximas 
+        instruções pode ser feita ao mesmo tempo que a execução de instruções que já foram lidas, o que possibilita que o 
+        processador sempre esteja executando instruções. Tal processo é possível devido à característica da arquitetura de 
+        utilizar barramentos independentes para dados e instruções.</p>
+      <p>Existe uma variação da Arquitetura de Harvard que possibilita que o conteúdo da memória de instruções seja acessado 
+        como se fosse de dados, tal variação é chamada de Arquitetura de Harvard Modificada, grande parte dos computadores 
+        modernos implementam essa arquitetura. As modificações são meios de amenizar a rígida separação entre instruções e 
+        dados que há na Arquitetura de Harvard original, porém mantendo a capacidade de transmitir simultaneamente dados e 
+        instruções que a mesma possui.</p>
     </div>
   </body>
 </html>
