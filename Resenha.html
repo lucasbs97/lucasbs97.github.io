@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="teste">
+      <h1>Arquitetura de Von Neumann X Arquitetura de Harvard</h1>
+      <p>A arquitetura de um computador é o projeto conceitual da estrutura operacional do sistema computacional.
+        Ela é o estudo dos requisitos necessários para que um computador funcione e de como organizar os diversos
+        componentes para obter melhores desempenhos. Por exemplo, o conjunto de instruções, técnicas de endereçamento
+        de memória e mecanismos de entrada e saída são todos atributos arquiteturais. Este texto irá abordar e comparar
+        duas arquiteturas de computadores muitos importantes no cenário computacional: a arquitetura de von Neumann e
+        a arquitetura de Harvard.</p>
+      <h2>Arquitetura de Von Neumann</h2>
+      <p>A Arquitetura de von Neumann (de John von Neumann), é uma arquitetura de computador que parte do princípio de
+        utilizar o mesmo espaço de memória de uma máquina digital para armazenar programas e dados, permitindo que esses
+        programas sejam alterados e manipulados.</p>
+      <p>Antes de von Neumann não existia o conceito de programa armazenado, ou seja, os programas eram projetados,
+        desenvolvidos e executados imediatamente. Esse conceito surgiu em 1945, durante o projeto do primeiro computador
+        a utilizar esse conceito, o EDVAC, e apesar de John von Neumann ter recebido a maior parte dos créditos,
+        várias pessoas também participaram do projeto. Von Neumann acabou recebendo mais destaque por ter escrito um
+        relatório sobre o EDVAC, onde ele descreveu o conceito de maneira formal, servindo como um guia que influenciou
+        a próxima geração de computadores. O termo “arquitetura de von Neumann” surgiu a partir da publicação deste relatório.</p>
+      <p>O modelo de computador proposto por von Neumann reúne os seguintes itens:</p>
+      <ul>
+        <li>Uma unidade aritmética e lógica (ALU) capaz de realizar operações aritméticas elementares e lógicas sobre dados binários;</li>
+        <li>Uma unidade de controle do programa (UC), responsável por determinar a sequência das instruções a serem executadas;</li>
+        <li>Uma memória capaz de armazenar dados e programas;</li>
+        <li>Dispositivos de entrada e saída para comunicação externa.</li>
+      </ul>
+      <p>A arquitetura era originalmente constituída por três grandes sistemas de hardware: sistema central de processamento (CPU),
+        sistema de memória e sistema de entrada/saída. A CPU é composta por uma unidade de controle (UC), unidade lógica e
+        aritmética (ULA), registradores (memórias internas da CPU) e um contador de programa (PC). O contador de programa,
+        ou programm counter, é um registrador de função específica que é responsável por indicar a próxima instrução a ser
+        buscada na memória para ser executada pela CPU. A arquitetura tem a capacidade de executar instruções de maneira
+        sequencial e conta com apenas um canal de transmissão de dados entre a CPU e a memória, que é conhecido como gargalo
+        de von Neumann.</p>
+      <p>O gargalo de von Neumann é causado pela taxa de transferência de dados limitada entre a CPU e a memória em relação à
+        quantidade de memória. Na maior parte dos computadores atuais, a velocidade de comunicação entre o processador e a
+        memória é muito menor do que a velocidade de operação do processador. A CPU frequentemente perde tempo aguardando que
+        dados sejam movimentados para a memória ou partir da mesma para a própria CPU. Isso limita drasticamente a velocidade
+        real de processamento, principalmente quando é necessário processar grandes volumes de dados. O problema pode ser
+        amenizado até certo ponto de diversas maneiras: Inserindo uma memória cache entre o processador e a memória, utilizando
+        caches separados com canais de transmissão separados para dados e instruções (conceito da arquitetura de Harvard Modificada
+        que será abordada mais abaixo), entre outros.</p>
+      <h2>Arquitetura de Harvard</h2>
+      <p>A arquitetura de Harvard surgiu da necessidade de fazer com que a CPU trabalhe mais rápido e tem como principal ponto
+        o uso de locais de memória distintos e de canais de transmissão independentes para dados e instruções, permitindo que o
+        processador acesse ambos simultaneamente.</p>
+      <p>O conceito dessa arquitetura teve origem na Universidade de Harvard no projeto do computador Harvard Mark I, desenvolvido
+        entre os anos de 1937 e 1944, ele foi idealizado por Howard Aiken ao lado da IBM e da marinha norte americana. Esse
+        computador unia conceitos digitais e analógicos, pois em sua composição haviam sistemas mecânicos e eletrônicos. Apesar
+        de ter origem durante a segunda guerra mundial, a arquitetura só veio à tona novamente durante a década de 70 com o
+        desenvolvimento dos circuitos integrados e transistores.</p>
+      <p>A arquitetura de Harvard faz uso de um processo chamado de pipelining, isso quer dizer que a leitura das próximas
+        instruções pode ser feita ao mesmo tempo que a execução de instruções que já foram lidas, o que possibilita que o
+        processador sempre esteja executando instruções. Tal processo é possível devido à característica da arquitetura de
+        utilizar barramentos independentes para dados e instruções.</p>
+      <p>Existe uma variação da Arquitetura de Harvard que possibilita que o conteúdo da memória de instruções seja acessado
+        como se fosse de dados, tal variação é chamada de Arquitetura de Harvard Modificada, grande parte dos computadores
+        modernos implementam essa arquitetura. As modificações são meios de amenizar a rígida separação entre instruções e
+        dados que há na Arquitetura de Harvard original, porém mantendo a capacidade de transmitir simultaneamente dados e
+        instruções que a mesma possui.</p>
+      <h2>Von Neumann vs Harvard</h2>
+      <p>A principal diferença entre as duas arquiteturas, como já citado anteriormente, é que enquanto a Arquitetura de
+        Harvard separa a transmissão e o armazenamento de dados e instruções da CPU, a Arquitetura de von Neumann faz uso
+        do mesmo local de memória e de apenas um caminho de transmissão para ambos. Outra diferença é que a Arquitetura
+        Harvard conta com um conjunto menor de instruções em relação à arquitetura de von Neumann.</p>
+      <p>Estas diferenças trazem como consequência vantagens e desvantagens para cada uma das arquiteturas e por isso não
+        há como decidir qual a melhor. No entanto podemos compará-las com base em suas características:</p>
+      <ul>
+        <li>Von Neumann
+          <ul>
+            <li>Vantagens
+              <ul>
+                <li>Programadores podem usar a memória instalada como bem entenderem</li>
+                <li>Ter apenas um canal de transmissão torna o computador mais simples e barato;</li>
+              </ul>
+            </li>
+            <li>Desvantagens
+              <ul>
+                <li>Apenas um canal de transmissão para dados e instruções é um gargalo, apenas uma informação pode ser
+                  acessada por vez;</li>
+                <li>Um erro na execução de um programa pode reescrever suas instruções na memória e interromper sua
+                  execução, uma vez que dados e instruções compartilham o mesmo espaço;</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>Harvard
+          <ul>
+            <li>Vantagens
+              <ul>
+                <li>Dois locais de memória com dois canais de transmissão permitem acesso paralelo a dados e instruções;</li>
+                <li>Programas não podem reescrever a si mesmos;</li>
+                <li>As duas memórias podem utilizar tecnologias e tamanho de célula diferentes;</li>
+              </ul>
+            </li>
+            <li>Desvantagens
+              <ul>
+                <li>Memória de dados livre não pode ser usada para guardar instruções e vice-versa;</li>
+                <li>Produção do computador com dois canais de transmissão requer mais tempo e é mais cara;</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>A arquitetura de Harvard é mais comumente utilizada em microprocessamento, tais como sistemas embarcados e processamento
+        de sinais, enquanto a arquitetura de von Neumann geralmente é encontrada em desktops, laptops e computadores de alta
+        performance. Ambas arquiteturas normalmente são modificadas para contornar desvantagens. Cabe ao usuário selecionar a que
+        melhor atenda ao seu propósito com base nas informações e nas vantagens e desvantagens de cada uma delas.</p>
+      <h2>Referências</h2>
+
+    </div>
+  </body>
+</html>
+
+
+
+<style>
+  .teste {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  p {
+    text-align: justify;
+
+  }
+
+</style>
